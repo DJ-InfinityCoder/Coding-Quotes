@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DJ-InfinityCoder</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="cd.png" type="image/png">
+</head>
+
+<body>
+    <div class="navBar">
+        <i class="ri-code-s-slash-line logo-image"></i>
+        <ul class="nav_list" id="nav_list">
+            <div class="nav_close" id="nav_close"><i class="ri-close-large-line"></i></div>
+            <li>Store</li>
+            <li>Courses</li>
+            <li>Documentation</li>
+            <li>Blog</li>
+            <li>Account</li>
+            <li>Contact</li>
+        </ul>
+        <button class="sign_in">Sign In</button>
+        <div class="nav_toggle" id="nav_toggle"><i class="ri-menu-fold-line"></i></div>
+    </div>
+    <div class="content">
+        <div class="left">
+            <div class="dynamicText">
+                <h1 class="typed-text"></h1>
+            </div>
+            <!-- <div class="left-image"><img src="cd.png"></div> -->
+            <h2>Inspirational Qutoes-</h2>
+            <div class="Qutoes">
+                <p>"Coding is the art of turning caffeine into code."</p>
+                <p>"In coding, there's no place like 127.0.0.1."</p>
+                <p>"Coding is like cooking. Everyone can follow a recipe, but only a few can create a masterpiece."</p>
+                <p>"Coding: where bugs go to die."</p>
+                <p>"Coding is the closest thing we have to magic."</p>
+                <p>"In coding, simplicity is the ultimate sophistication."</p>
+                <p>"Coding is not just about fixing problems. It's about creating solutions."</p>
+                <p>"Coding is the language of the future, and every child should learn it."</p>
+                <p>"Coding is the only job where you can type a single line of code and feel like a superhero."</p>
+                <p>"Coding: It's not just a job, it's an adventure."</p>
+                <button class="explore-btn">Explore more...</button>
+            </div>
+        </div>
+        <div class="right"><img src="cd.png"></div>
+    </div>
+</body>
+
+
+<!-- Load library from the CDN -->
+<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+<!-- Setup and start animation! -->
+<script>
+    var typed = new Typed('.typed-text', {
+        strings: ['Hi I am <span class="highlight">DJ</span>', 'Learn from the <span class="highlight">smartest</span> coding platform of India.'],
+        typeSpeed: 50,
+        backSeed: 50,
+        loop: true,
+        showCursor: false,
+
+    });
+
+
+</script>
+<script src="script.js"></script>
+
+
+</html>

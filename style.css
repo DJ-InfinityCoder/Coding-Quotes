@@ -1,0 +1,321 @@
+@import url('https://fonts.googleapis.com/css2?family=Kalam&family=Marko+One&family=Merienda:wght@300..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    cursor: url('cursor-fill.png'), auto;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+.logo-image {
+    font-size: 3.5vw;
+    padding: 1rem;
+    margin-left: 2rem;
+    color: #a829fc;
+}
+
+.logo-image:hover {
+    cursor: pointer;
+    color: #9900ff;
+}
+
+.navBar {
+    background-color: rgb(240, 248, 255);
+    position: fixed;
+    z-index: 1000;
+    border-bottom: 2px solid gray;
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav_toggle,
+.nav_close {
+    display: none;
+}
+
+.nav_list {
+    list-style: none;
+    display: flex;
+    width: 85%;
+    justify-content: end;
+    align-items: center;
+    font-size: 1.5vw;
+    padding-left: 3vw;
+}
+
+.nav_list li {
+    font-family: "Merienda", cursive;
+    padding: 1.5vh 1.2vw;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+li:hover {
+    color: rgb(217, 0, 255);
+    cursor: pointer;
+    transform: translateY(3px) scale(0.92);
+}
+
+li::after {
+    position: absolute;
+    content: "";
+    height: 2.5px;
+    width: 100%;
+    background-color: rgb(100, 2, 122);
+    left: 0;
+    top: 48px;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    transform: scaleX(0);
+    transform-origin: bottom center;
+    transition: transform 0.25s ease-out;
+}
+
+li:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left right;
+}
+
+.sign_in {
+    width: 7vw;
+    padding: 0.5vh 0.5vw 0.5vh 0.5vw;
+    font-size: 1.5vw;
+    border: 2px solid #000000;
+    border-radius: 10px;
+    margin-right: 3.6vw;
+    background-color: #b998fa;
+    font-family: "Merienda", cursive;
+}
+
+.sign_in:hover {
+    background-color: rgb(181, 108, 250);
+    cursor: pointer;
+    box-shadow: 1.5px 1.5px 2px rgba(176, 100, 248, 0.532);
+}
+
+.content {
+    height: calc(100% - 80px);
+    width: 100%;
+    display: flex;
+    position: absolute;
+    left: 0;
+    top: 13vh;
+}
+
+.left {
+    height: 100%;
+    width: 65%;
+    margin-left: 2.7rem;
+    margin-right: 1.2rem;
+}
+
+.dynamicText {
+    height: 15vh;
+    margin-bottom: 6.5vh;
+}
+
+.highlight {
+    color: lightseagreen;
+    font-weight: bold;
+    font-style: italic;
+    font-family: "Merienda", cursive;
+}
+
+.left h1 {
+    font-size: 3.2vw;
+    /* line-height: 7vh; */
+    font-family: "Marko One", serif;
+    font-weight: lighter
+}
+
+.left h2 {
+    width: fit-content;
+    font-size: 2.5vw;
+    border-bottom: 1rem double #e3bdfd;
+    border-radius: 20px;
+    padding: 0.4rem 1rem;
+    color: #a829fc;
+
+}
+
+.left p {
+    font-family: "Kalam", cursive;
+    font-size: 1.5vw;
+    font-weight: 500;
+    width: 100%;
+    padding: 1rem 1.5rem;
+    margin: 3.2vh 0vw;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: rgb(75, 246, 237);
+    transition: transform 0.5s ease;
+}
+
+.left p:hover {
+    transform: scale(1.07);
+    cursor: pointer;
+}
+
+.explore-btn {
+    font-family: "Merienda", cursive;
+    width: fit-content;
+    padding: 0.7vh 0.5vw 0.7vh 0.5vw;
+    font-size: 1.5vw;
+    border: 2px solid #000000;
+    border-radius: 10px;
+    background-color: #a173fc;
+    margin-bottom: 50px;
+}
+
+.explore-btn:hover {
+    background-color: rgb(152, 35, 254);
+    cursor: pointer;
+    box-shadow: 1.5px 1.5px 2px rgba(176, 100, 248, 0.532);
+}
+
+.right {
+    height: 100%;
+    width: 35%;
+    display: flex;
+    align-items: end;
+    justify-content: right;
+}
+
+.right img {
+    position: fixed;
+    width: 43vw;
+    margin-right: -4.17vw;
+}
+
+@media screen and (max-width: 895px) {
+
+    .sign_in {
+        display: none;
+    }
+
+    .logo-image {
+        font-size: 6vw;
+        font-weight: bold;
+        margin-left: 1rem;
+    }
+
+    .navBar {
+        height: 6vh;
+    }
+
+    .nav_toggle {
+        display: block;
+        font-size: 6vw;
+        color: #9900ff;
+        font-weight: bold;
+        margin-right: 1rem;
+    }
+
+    .nav_close {
+        font-size: 50px;
+        color: tomato;
+        position: relative;
+        top: -8%;
+        left: 30%;
+    }
+
+
+    .nav_list {
+        position: fixed;
+        top: -230%;
+        right: 0;
+        z-index: 1000;
+        flex-direction: column;
+        background-color: hsla(230, 75%, 15%, .1);
+        backdrop-filter: blur(24px);
+        -webkit-backdrop-filter: blur(10%);
+        width: 100%;
+        height: 100%;
+        border-radius: 15px;
+        padding-block: 4.5rem 4rem;
+        transition: top 0.5s;
+        align-items: center;
+        justify-content: center;
+        font-size: 10vw;
+
+        .nav_close {
+            display: block;
+        }
+    }
+
+    li::after {
+        top: 5rem;
+    }
+
+    .show-menu {
+        top: 0px;
+    }
+
+    .content {
+        position: relative;
+        top: 8vh;
+        left: 2vw;
+        margin: 0px;
+
+    }
+
+    .dynamicText {
+        height: 1.5vh;
+    }
+
+
+
+    .left {
+        width: 50%;
+        margin-left: 1.5rem;
+    }
+
+    .left h1 {
+        margin-top: 2vh;
+    }
+
+    .right img {
+        position: unset;
+        position: absolute;
+        top: 0.1vh;
+        right: 4vw;
+        width: 45%;
+        padding: 0px;
+    }
+
+    .left h2 {
+        margin: 0.1vh 0vw 4vh 15vw;
+        font-size: 3vw;
+    }
+
+    .Qutoes {
+        width: 75vw;
+        position: relative;
+        left: 10%;
+    }
+
+    .Qutoes p {
+        padding: auto;
+        font-size: 3.5vw;
+    }
+
+    .explore-btn {
+        margin-bottom: 20px;
+    }
+
+
+
+
+
+}
